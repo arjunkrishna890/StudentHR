@@ -1,0 +1,36 @@
+.sidebar-container {
+    display: flex;
+    background-color: #f6f4fc;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #f6f4fc;
+    padding: 20px;
+  }
+  
+  /* Styles for the Navbar */
+  .navbar {
+    background: linear-gradient(90deg, rgba(244, 67, 54, 1) 0%, rgba(156, 39, 176, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+   
+    /* Add any other styling you need */
+  }
+  
+  /* Styles for the Sidebar */
+  .sidebar {
+    background: linear-gradient(90deg, rgba(244, 67, 54, 1) 0%, rgba(156, 39, 176, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+    color: white;
+   
+    width: 200px;
+    /* Add any other styling you need */
+  }
+  
+  /* Styles for the main content area */
+  .content {
+    /* Add any styling you need */
+  }
+  

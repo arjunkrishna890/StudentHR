@@ -1,0 +1,46 @@
+.App{$primary-color: #007bff;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  background-color: #f8f9fa;
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   
+    padding: 20px;
+  }
+  
+  .sidebar-title {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    &.active {
+      font-weight: bold;
+    }
+  }
+  
+    .signInDiv{
+        padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        button{
+            padding: 10px 20px;
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+                    }
+    }
+}
