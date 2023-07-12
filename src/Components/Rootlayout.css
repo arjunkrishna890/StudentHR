@@ -1,24 +1,30 @@
 .sidebar-container {
-    display: flex;
-    background-color: #f6f4fc;
-  }
-  
-  .main-content {
-    flex-grow: 1;
-    background-color: #f6f4fc;
-    padding: 20px;
-  }
-  
-  /* Styles for the Navbar */
+  display: flex;
+  background-color: #f6f4fc;
+}
+
+.main-content {
+  flex-grow: 1;
+ 
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.main-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
   .navbar {
-    background: linear-gradient(90deg, rgba(244, 67, 54, 1) 0%, rgba(156, 39, 176, 1) 100%);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: linear-gradient(90deg, rgba(244, 67, 54, 1) 0%, rgba(156, 39, 176, 1) 100%) !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
     padding: 10px;
    
     /* Add any other styling you need */
   }
   
-  /* Styles for the Sidebar */
+
   .sidebar {
     background: linear-gradient(90deg, rgba(244, 67, 54, 1) 0%, rgba(156, 39, 176, 1) 100%);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

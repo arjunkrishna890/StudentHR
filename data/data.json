@@ -7,12 +7,6 @@
       "id": 3
     },
     {
-      "name": "Emily Davis",
-      "DOB": "1996-08-17",
-      "place": "Tokyo",
-      "id": 4
-    },
-    {
       "name": "Arjun Krishna",
       "place": "Kollam",
       "DOB": "2009-11-28",
@@ -25,10 +19,16 @@
       "id": 6
     },
     {
-      "name": "KiranKumar",
-      "place": "Trivandrum",
-      "DOB": "2023-07-01",
-      "id": 7
+      "id": "909c44a5-5749-40a5-886b-fc090e7fec35",
+      "name": "Febin Joseph",
+      "place": "Kannur",
+      "DOB": "2000-07-20"
+    },
+    {
+      "id": "3c4fea96-4af4-44b7-9c80-36d1018fb9b4",
+      "name": "Angel Maria",
+      "place": "Malaprm",
+      "DOB": "2023-07-02"
     }
   ]
 }

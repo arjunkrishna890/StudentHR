@@ -1,17 +1,22 @@
 import React from 'react';
-import './Sidebar.scss'
+import './Sidebar.scss';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Sidebar() {
+  const history  = useNavigate();
+  const token = useSelector((state) => state.auth.token);
   return (
-    <div className="sidebar">
+<>
+{token?( <div className="sidebar">
     <h4 className="sidebar-title"><i>Dashboard</i></h4>
-    <ul className="sidebar-menu">
-      <li className="sidebar-menu-item active">Home</li>
-      <li className="sidebar-menu-item">Profile</li>
-      <li className="sidebar-menu-item">Settings</li>
-      <li className="sidebar-menu-item">Logout</li>
-    </ul>
-  </div>
+    <ul className="sidebar-menu"> <li className="sidebar-menu-item active" onClick={()=>history('/Dashboard')}>Home</li>   </ul>
+  </div>):("")}
+</>
+   
+     
+      
+  
   )
 }
 

@@ -8,12 +8,23 @@ export const fetchStudents = createAsyncThunk('students/fetchStudents', async ()
 });
 
 export const deleteStudent = createAsyncThunk('students/deleteStudent', async (studentId) => {
+  await fetch(`http://localhost:8000/students/${studentId}`, {
+    method: 'DELETE',
+  });
   return studentId;
 });
 
 export const addStudent = createAsyncThunk('students/addStudent', async (newStudent) => {
   const studentWithId = { id: uuidv4(), ...newStudent };
-  return studentWithId;
+  const response = await fetch('http://localhost:8000/students', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(studentWithId),
+  });
+  const data = await response.json();
+  return data;
 });
 
 const studentsSlice = createSlice({
@@ -23,12 +34,7 @@ const studentsSlice = createSlice({
     status: 'idle',
     error: null,
   },
-  reducers: {
-    studentDeleted: (state, action) => {
-      const studentId = action.payload;
-      state.data = state.data.filter((student) => student.id !== studentId);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchStudents.pending, (state) => {
@@ -52,8 +58,6 @@ const studentsSlice = createSlice({
       });
   },
 });
-
-export const { studentDeleted } = studentsSlice.actions;
 
 export default studentsSlice.reducer;
 

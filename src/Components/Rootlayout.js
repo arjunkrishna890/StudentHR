@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import Navbar from './Navbar';
 import { Provider } from 'react-redux';
 import store from '../Store/Store';
+import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import './Rootlayout.css'
+import './Rootlayout.css';
+
 
 function RootLayout() {
+  const [showMainContent, setShowMainContent] = useState(false);
+
+  useEffect(() => {
+    setShowMainContent(true);
+  }, []);
+
   return (
     <Provider store={store}>
       <div>
-        <Navbar />
+        <Navbar className="navbar"/>
         <div className="sidebar-container">
           <Sidebar />
-          <main className="main-content">
+          <div className={`main-content ${showMainContent ? 'show' : ''}`}>
             <Outlet />
-          </main>
+          </div>
         </div>
       </div>
     </Provider>
